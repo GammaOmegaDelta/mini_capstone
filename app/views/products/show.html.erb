@@ -1,0 +1,16 @@
+<h2> Show Action </h2>
+
+<a href="/products">Go back to the home page</a>
+
+<p>id: <%= @product.id %></p>
+<p>name <%= @product.price %></p>
+<p>description <%= @product.description %></p>
+<img src="<%= @product.img_url %>">
+
+
+<!-- <form action="/products/<%= @product.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Recipe">
+</form> -->
+
+<a href="/products/<%= @product.id %>" data-method="delete" rel="nofollow">Delete the item</a>

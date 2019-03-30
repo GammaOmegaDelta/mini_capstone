@@ -1,0 +1,25 @@
+<h2><u>Make a New Product</u></h2>
+
+<form action="/products" method="post">
+  Name: <input type=text name="name">
+  Description: <input type=text name="description">
+  Price: <input type=text name="price">
+<!--   Supplier_ID: <input type=text name="supplier_id">
+ --><label for="Supplier">Choose a supplier:</label>
+
+<!-- <select name="supplier_id">
+    <option value="">--Please choose an option--</option>
+    <option value="1">Nike</option>
+    <option value="2">Addidas</option>
+    <option value="3">Reebok</option>
+</select> -->
+
+<select name="supplier_id"> 
+  <% @suppliers.each do |supplier| %>
+    <option value="<%= supplier.id %>"><%= supplier.name %></option>
+  <% end %>
+</select>
+
+<p>Image: input type</p>
+ <p><input type="submit" value="Make a new product"></p>
+</form>
