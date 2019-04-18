@@ -1,5 +1,7 @@
 {
   "name": "mini_capstones",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "vue2-filters": "^0.6.0"
+  }
 }
